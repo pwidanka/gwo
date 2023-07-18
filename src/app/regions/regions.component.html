@@ -1,0 +1,7 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxLayoutAlign="center center" *ngFor="let region of regions" class="region__card" (click)="onRegionDetails(region)">
+        <mat-card-header>
+            <mat-card-title color="accent">{{region}}</mat-card-title>
+        </mat-card-header>
+    </mat-card>
+</section>

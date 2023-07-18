@@ -1,0 +1,22 @@
+<div fxLayout="column" fxFlexFill>
+    <header class="header">
+        <mat-toolbar>
+            <img src="./assets/logo.png" alt="logo" class="header__logo" />
+
+            <span class="header__spacer"></span>
+            <button *ngIf="showBackButton()" mat-icon-button matTooltip="Cofnij" (click)="onBack()">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+        </mat-toolbar>
+    </header>
+
+    <main class="main">
+        <router-outlet></router-outlet>
+    </main>
+
+    <footer class="footer">
+        <mat-toolbar fxLayoutAlign="end center">
+            <button (click)="aboutMe()" mat-raised-button>O mnie</button>
+        </mat-toolbar>
+    </footer>
+</div>

@@ -1,0 +1,16 @@
+.countries {
+    &__card {
+        margin: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    &__country{
+        cursor: pointer;
+    }
+
+    &__flag{
+        width: 45px;
+    }
+
+}

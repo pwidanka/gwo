@@ -1,0 +1,18 @@
+<section class="countries" fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card class="countries__card">
+        <mat-card-title>Region: {{region}}</mat-card-title>
+        <mat-card-content>
+            <mat-list fxLayout="column">
+                <ng-container *ngFor="let country of countries$ | async; last as last">
+                    <mat-list-item fxLayout="row" (click)="onCountryDetails(country)">
+                        <div class="countries__country" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="100px">
+                            <img class="countries__flag" [src]="country.flags.png" alt="flag">
+                            <span>{{country.name.common}}</span>
+                        </div>
+                    </mat-list-item>
+                    <mat-divider *ngIf="!last" fxFlex="100"></mat-divider>
+                </ng-container>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+</section>

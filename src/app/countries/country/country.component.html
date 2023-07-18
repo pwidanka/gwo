@@ -1,0 +1,38 @@
+<section class="country" fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card class="country__card" fxFlex="50">
+        <mat-card-header>
+            <mat-card-title-group class="country__header-group">
+                <img mat-card-image [src]="country.flags.png">
+                <mat-card-title class="country__title">{{country.fifa}}</mat-card-title>
+                <mat-card-subtitle>{{country.name.common}}</mat-card-subtitle>
+            </mat-card-title-group>
+
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list fxLayout="column">
+                <mat-divider></mat-divider>
+                <mat-list-item fxLayout="row">
+                    <div class="country__item" fxLayout="row" fxLayoutAlign="start center">
+                        Stolica: {{country.capital}}
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item fxLayout="row">
+                    <div class="country__item" fxLayout="row" fxLayoutAlign="start center">
+                        Waluta: 
+                        <ng-container *ngFor="let currency of country.currencies; let last = last">
+                            <span> {{ currency.name }} - {{currency.symbol}} </span>
+                            <span *ngIf="!last">, </span>
+                        </ng-container>
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item fxLayout="row">
+                    <div class="country__item" fxLayout="row" fxLayoutAlign="start center">
+                        Populacja: {{country.population}}
+                    </div>
+                </mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+</section>

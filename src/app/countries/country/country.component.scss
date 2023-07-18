@@ -1,0 +1,20 @@
+.country {
+    &__card {
+        margin: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    &__header-group{
+        flex-direction: row-reverse;
+    }
+
+    &__title{
+        font-size: 50px;
+    }
+
+    &__item{
+        white-space: pre;
+    }
+
+}
